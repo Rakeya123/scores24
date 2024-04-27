@@ -38,13 +38,37 @@ dependencies {
             "org.aspectj:aspectjweaver:1.9.22"
     )
 }
-test {
+
+
+test{
+    systemProperty "chromeoptions.prefs", "intl.accept_languages=ru"
     useJUnitPlatform()
 }
+
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
+    useJUnitPlatform()
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
+
 task minimum_test(type: Test) {
     systemProperty "chromeoptions.prefs", "intl.accept_languages=ru"
 
     useJUnitPlatform {
         includeTags("minimum")
     }
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
 }
