@@ -9,6 +9,7 @@ version = '1.0-SNAPSHOT'
 def allureVersion = "2.27.0"
 
 
+
 allure {
     report {
         version.set(allureVersion)
