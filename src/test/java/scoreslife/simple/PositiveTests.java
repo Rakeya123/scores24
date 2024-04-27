@@ -23,9 +23,20 @@ import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class PositiveTests extends TestBase {
 
+
     @BeforeAll
     static void setup() {
 
+
+        Configuration.remote = "https://user1:1234@"+System.getProperty("remote","selenoid.autotests.cloud")+"/wd/hub";
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+                "enableVideo", true
+        ));
+
+        Configuration.browserCapabilities = capabilities;
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
     }

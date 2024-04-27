@@ -21,8 +21,8 @@ public class TestBase {
         var banner2 =$("._overlay_mp148_37");
         executeJavaScript("arguments[0].remove()",banner2);
 
-//       var banner3= $("div[class*=\"_bodyOpen_\"]");
-//        executeJavaScript("arguments[0].remove()",banner3);
+    var banner3= $("div[class*=\"_bodyOpen_\"]");
+      executeJavaScript("arguments[0].remove()",banner3);
 
 
 
