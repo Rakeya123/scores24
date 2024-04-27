@@ -1,0 +1,16 @@
+{
+  "base": {
+    "project": "project name",
+    "environment": "my_bot",
+    "comment": "comment here @rakeya12345",
+    "reportLink": "https://jenkins.autotests.cloud/job/scores24/ws/allure-report/",
+    "language": "en",
+    "allureFolder": "allure-report",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "7076734978:AAFG0QZGRPsXuF6WiaJohx-W4bZr7RI1NcE",
+    "chat": "-734345106",
+    "replyTo": ""
+  }
+}

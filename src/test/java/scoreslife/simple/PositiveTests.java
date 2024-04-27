@@ -1,25 +1,18 @@
 package scoreslife.simple;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.conditions.Text;
-import com.codeborne.selenide.impl.JavaScript;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.withText;
-import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.executeJavaScript;
+import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
 public class PositiveTests extends TestBase {
@@ -104,7 +97,7 @@ public class PositiveTests extends TestBase {
         });
 
         step("Убедиться в наличии заголовка", () -> {
-            $(".ilZOcA").shouldHave(text("Ставка дня"));
+            $(".cFLTXw").shouldHave(text("Ставка дня"));
 
         });
 
