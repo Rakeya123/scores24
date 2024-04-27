@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.executeJavaScript;
 public class TestBase {
     @BeforeEach
     public void beforeEach() {
-        Configuration.browserSize = "1920Х1080";
+        Configuration.browserSize = "2560x1080";
         Configuration.pageLoadStrategy = "eager";
         Configuration.browser = System.getProperty("browser", "chrome");
         open("https://scores24.live/ru");
@@ -20,9 +20,10 @@ public class TestBase {
         executeJavaScript("arguments[0].remove()",banner1);
         var banner2 =$("._overlay_mp148_37");
         executeJavaScript("arguments[0].remove()",banner2);
-
-    var banner3= $("div[class*=\"_bodyOpen_\"]");
-      executeJavaScript("arguments[0].remove()",banner3);
+        var banner3 =$("._root_mp148_1");
+        executeJavaScript("arguments[0].remove()",banner3);
+//       var banner3= $("div[class*=\"_bodyOpen_\"]");
+//        executeJavaScript("arguments[0].remove()",banner3);
 
 
 
